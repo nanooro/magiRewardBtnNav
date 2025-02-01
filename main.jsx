@@ -17,7 +17,7 @@ function App() {
         className="w-4/5 h-[75vh] outline flex flex-col bg-white rounded-xl justify-center items-center"
         id="card"
       >
-        <p className="text-4xl -mt-12 m-5" id="question1">
+        <p className="text-3xl -mt-12 m-5" id="question1">
           how many answers did akash learn?
         </p>
         <p className="m-5 text-xl" id="answersLearnedOutput">
