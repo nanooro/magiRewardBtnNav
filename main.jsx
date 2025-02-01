@@ -1,5 +1,10 @@
 let answersLearnedCountRef = 1;
 function App() {
+  let numOfMagi = 0;
+  function getNumOfMagi() {
+    numOfMagi++;
+    return answeresLearned / 5;
+  }
   const incrementAnswersLearned = () => {
     setAnswersLearned(answersLearnedCountRef++);
   };
@@ -7,7 +12,7 @@ function App() {
     setAnswersLearned(answersLearnedCountRef--);
   };
   const { useState } = React;
-  const [answersLearned, setAnswersLearned] = useState("");
+  const [answersLearned, setAnswersLearned] = useState("0");
   return (
     <div
       className="h-screen bg-gray-100 flex flex-col justify-center align-middle items-center"
@@ -17,10 +22,10 @@ function App() {
         className="w-4/5 h-[75vh] outline flex flex-col bg-white rounded-xl justify-center items-center"
         id="card"
       >
-        <p className="text-3xl -mt-12 m-5" id="question1">
+        <p className="text-2xl -mt-12 m-5" id="question1">
           how many answers did akash learn?
         </p>
-        <p className="m-5 text-xl" id="answersLearnedOutput">
+        <p className="m-5 text-lg" id="answersLearnedOutput">
           akash has currently learned{" "}
           <span className="text-blue-500 text-xl">{answersLearned}</span>{" "}
           answers
@@ -47,6 +52,12 @@ function App() {
             </button>
           </div>
         </div>
+        <p className="m-5" id="result">
+          akash has earned{" "}
+          <span className="text-blue-400 text-2xl">{getNumOfMagi()}</span>{" "}
+          packets of magi estimated cost:
+          <span className="text-2xl text-red-400">{answersLearned * 14}</span>
+        </p>
       </div>
     </div>
   );
