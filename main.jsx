@@ -31,38 +31,38 @@ function App() {
         id="card"
       >
         {/* <div className="absolute top-1 mt-12" id="main"> */}
-    
-            <p className="text-2xl m-5" id="question1">
-              how many answers did akash learn?
-            </p>
-            <div
-              className="flex flex-row justify-center items-center"
-              id="inputDiv"
-            >
-              <input
+
+        <p className="text-2xl m-5" id="question1">
+          how many answers did akash learn?
+        </p>
+        <div
+          className="flex flex-row justify-center items-center"
+          id="inputDiv"
+        >
+          {/* <input
                 type="text"
                 className="w-32 h-12 outline rounded-md shadow-xl m-12 text-center placeholder-gray-500 "
                 id="question"
                 onChange={hanldeUserInputValueChange}
                 placeholder="enter it here"
-              />
-              {/* <button
-                className="outline w-auto h-12 rounded-md shadow-xl transition  hover:bg-blue-100"
-                id="calculate"
-              >
-                calculate
-              </button> */}
-            </div>
-            <p className="text-xl" id="output">
-              {handleUserInputSubmit()}
-            </p>
+              /> */}
+          <button
+            className="outline w-auto h-12 rounded-md shadow-xl transition  hover:bg-blue-100"
+            id="calculate"
+          >
+            calculate
+          </button>
+        </div>
+        <p className="text-xl" id="output">
+          {handleUserInputSubmit()}
+        </p>
 
-            <p className="m-5 text-xl" id="priceOutput">
-              estimated price: {calculatePrice()}
-            </p>
+        <p className="m-5 text-xl" id="priceOutput">
+          estimated price: {calculatePrice()}
+        </p>
       </div>
     </div>
-  //  </div>
+    //  </div>
   );
 }
 
