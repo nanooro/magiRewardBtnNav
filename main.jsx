@@ -1,18 +1,20 @@
-let answersLearnedCountRef = 1;
+let answersLearned = 1;
+
 function App() {
+  const { useState } = React;
+  const [answersLearned, setAnswersLearned] = useState(0);
   let numOfMagi = 0;
   function getNumOfMagi() {
     numOfMagi++;
-    return answeresLearned / 5;
+    // return answeresLearned / 5;
   }
   const incrementAnswersLearned = () => {
-    setAnswersLearned(answersLearnedCountRef++);
+    setAnswersLearned(answersLearned => answersLearned + 1);
   };
   const decrementAnswersLearned = () => {
-    setAnswersLearned(answersLearnedCountRef--);
+    setAnswersLearned(answersLearned-1);
   };
-  const { useState } = React;
-  const [answersLearned, setAnswersLearned] = useState("0");
+
   return (
     <div
       className="h-screen bg-gray-100 flex flex-col justify-center align-middle items-center"
@@ -54,9 +56,9 @@ function App() {
         </div>
         <p className="m-5" id="result">
           akash has earned{" "}
-          <span className="text-blue-400 text-2xl">{getNumOfMagi()}</span>{" "}
+          <span className="text-blue-400 text-2xl">{answersLearned / 2}</span>{" "}
           packets of magi estimated cost:
-          <span className="text-2xl text-red-400">{answersLearned * 14}</span>
+          <span className="text-2xl text-red-400">{answersLearned * 14 /2 }</span>
         </p>
       </div>
     </div>
