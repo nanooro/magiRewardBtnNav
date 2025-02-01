@@ -1,26 +1,25 @@
 let calculatedResultNum = 0;
 function App() {
   const { useState } = React;
-  const [userInputValue, setUserInputValue] = useState("");
-  const hanldeUserInputValueChange = (event) => {
-    setUserInputValue(event.target.value);
-  };
-  let restult = 0;
-  const handleUserInputSubmit = () => {
-    if (userInputValue.trim() === "") {
-      return "Enter something";
-    } else if (isNaN(userInputValue) === false) {
-      calculatedResultNum = userInputValue / 2;
-      return "akash has earned " + calculatedResultNum + " magi packet";
-    } else if (isNaN(userInputValue) === true) {
-      return "enter a number";
-    } else {
-      return "Oops!. something went wrong try again(try reloading)";
-    }
-  };
-  const calculatePrice = () => {
-    return calculatedResultNum * 14;
-  };
+  // const [userInputValue, setUserInputValue] = useState("");
+  // const hanldeUserInputValueChange = (event) => {
+  //   setUserInputValue(event.target.value);
+  // };
+  // const handleUserInputSubmit = () => {
+  //   if (userInputValue.trim() === "") {
+  //     return "Enter something";
+  //   } else if (isNaN(userInputValue) === false) {
+  //     calculatedResultNum = userInputValue / 2;
+  //     return "akash has earned " + calculatedResultNum + " magi packet";
+  //   } else if (isNaN(userInputValue) === true) {
+  //     return "enter a number";
+  //   } else {
+  //     return "Oops!. something went wrong try again(try reloading)";
+  //   }
+  // };
+  // const calculatePrice = () => {
+  //   return calculatedResultNum * 14;
+  // };
   return (
     <div
       className="h-screen bg-gray-100 flex flex-col justify-center align-middle items-center"
@@ -46,20 +45,28 @@ function App() {
                 onChange={hanldeUserInputValueChange}
                 placeholder="enter it here"
               /> */}
-          <button
-            className="outline w-auto h-12 rounded-md shadow-xl transition  hover:bg-blue-100"
-            id="calculate"
-          >
-            calculate
-          </button>
+          <div className="flex gap-5" id="Btns">
+            <button
+              className="outline w-auto  p-5 flex items-center text-xl hover:bg-blue-200 h-12 rounded-md shadow-xl transition  hover:bg-blue-100"
+              id="calculate"
+            >
+              +1
+            </button>
+            <button
+              className="outline w-auto p-5 flex items-center text-xl hover:bg-red-200 h-12 rounded-md shadow-xl transition  hover:bg-blue-100"
+              id="calculate"
+            >
+              -1
+            </button>
+          </div>
         </div>
-        <p className="text-xl" id="output">
+        {/* <p className="text-xl" id="output">
           {handleUserInputSubmit()}
-        </p>
+        </p> */}
 
-        <p className="m-5 text-xl" id="priceOutput">
+        {/* <p className="m-5 text-xl" id="priceOutput">
           estimated price: {calculatePrice()}
-        </p>
+        </p> */}
       </div>
     </div>
     //  </div>
