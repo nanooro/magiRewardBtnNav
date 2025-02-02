@@ -9,10 +9,10 @@ function App() {
     // return answeresLearned / 5;
   }
   const incrementAnswersLearned = () => {
-    setAnswersLearned(answersLearned => answersLearned + 1);
+    setAnswersLearned((answersLearned) => answersLearned + 1);
   };
   const decrementAnswersLearned = () => {
-    setAnswersLearned(answersLearned-1);
+    setAnswersLearned(answersLearned - 1);
   };
 
   return (
@@ -55,10 +55,15 @@ function App() {
           </div>
         </div>
         <p className="m-5" id="result">
-          akash has earned{" "}
-          <span className="text-blue-400 text-2xl">{answersLearned / 2}</span>{" "}
+          akash has earned
+          <span className="text-yellow-400 text-2xl">
+            {" "}
+            {answersLearned / 2}{" "}
+          </span>{" "}
           packets of magi estimated cost:
-          <span className="text-2xl text-red-400">{answersLearned * 14 /2 }</span>
+          <span className="text-2xl text-red-400">
+            {(answersLearned * 14) / 2}rs
+          </span>
         </p>
       </div>
     </div>
